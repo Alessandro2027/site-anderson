@@ -34,6 +34,7 @@ header .container{
 
 .logo h1{
     color:#fff;
+    font-size:32px;
 }
 
 /* MENU */
@@ -55,36 +56,43 @@ nav a:hover{
 
 /* BANNER */
 .banner{
-    height:500px;
+    min-height:500px;
 
     background-image:url('imagens/banner.png');
 
     background-size:cover;
-    background-position:center;
+    background-position:center center;
+    background-repeat:no-repeat;
 
     display:flex;
     justify-content:center;
     align-items:center;
 
     text-align:center;
+
+    padding:20px;
 }
 
+/* TEXTO BANNER */
 .banner-texto{
     background:rgba(0,0,0,0.5);
 
     padding:30px;
 
     border-radius:10px;
+
+    max-width:700px;
 }
 
 .banner-texto h2{
     color:#fff;
     font-size:50px;
+    line-height:1.2;
 }
 
 .banner-texto p{
     color:#fff;
-    margin-top:10px;
+    margin-top:15px;
     font-size:22px;
 }
 
@@ -119,7 +127,7 @@ nav a:hover{
     font-size:35px;
 }
 
-/* GRID */
+/* GRID PRODUTOS */
 .grid-produtos{
     display:grid;
 
@@ -133,7 +141,7 @@ nav a:hover{
 .card{
     background:#fff;
 
-    border-radius:10px;
+    border-radius:12px;
 
     overflow:hidden;
 
@@ -146,6 +154,7 @@ nav a:hover{
     transform:translateY(-5px);
 }
 
+/* IMAGEM CARD */
 .card img{
     width:100%;
     height:250px;
@@ -153,11 +162,14 @@ nav a:hover{
     object-fit:cover;
 }
 
+/* TITULO CARD */
 .card h3{
     padding:15px;
     color:#d89b00;
+    font-size:24px;
 }
 
+/* TEXTO CARD */
 .card p{
     padding:0 15px 20px;
 }
@@ -174,7 +186,7 @@ nav a:hover{
     font-size:35px;
 }
 
-/* RODAPE */
+/* FOOTER */
 footer{
     background:#222;
     color:#fff;
@@ -187,17 +199,82 @@ footer{
 /* RESPONSIVO */
 @media(max-width:768px){
 
+    /* HEADER */
     header .container{
         flex-direction:column;
         gap:15px;
     }
 
+    /* MENU */
+    nav{
+        flex-wrap:wrap;
+        justify-content:center;
+    }
+
+    nav a{
+        font-size:16px;
+    }
+
+    /* BANNER */
+    .banner{
+        min-height:350px;
+
+        background-position:center;
+    }
+
+    /* TEXTO BANNER */
+    .banner-texto{
+        width:100%;
+
+        padding:20px;
+    }
+
     .banner-texto h2{
-        font-size:35px;
+        font-size:30px;
     }
 
     .banner-texto p{
-        font-size:18px;
+        font-size:16px;
     }
 
+    /* TITULOS */
+    .sobre h2,
+    .produtos h2,
+    .contato h2{
+        font-size:28px;
+    }
+
+    /* TEXTO SOBRE */
+    .sobre p{
+        font-size:16px;
+    }
+
+    /* IMAGENS */
+    .card img{
+        height:220px;
+    }
+
+}
+
+/* BOTAO WHATSAPP */
+.botao-whatsapp{
+    display:inline-block;
+
+    margin-top:20px;
+    padding:15px 25px;
+
+    background:#25d366;
+    color:#fff;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+.botao-whatsapp:hover{
+    background:#1ebe5d;
 }
